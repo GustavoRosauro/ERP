@@ -5,8 +5,36 @@
 <script src="~/Scripts/angular.js"></script>
 <h2>Lista</h2>
 <div class="col-md-12" ng-app="ClientesAPP" ng-controller="ListaController">
+<div ng-repeat="dados in listaFormulario">
+    <form name="userForm" novalidate class="form">
+        <input ng-model="dados.Id" hidden/>
+        <label>Nome</label>
+        <input class="form-control" ng-model="dados.Nome" required />
+        <label>Profissão</label>
+        <input class="form-control" ng-model="dados.Profissao" required />
+        <label>E-mail</label>
+        <input class="form-control" type="email" ng-model="dados.Email" required />
+        <label>CPF</label>
+        <input class="form-control" type="text" onkeyup="somenteNumeros(this)" maxlength="11" ng-model="dados.CPF" required />
+        <label>CEP</label>
+        <input class="form-control" type="text" onkeyup="somenteNumeros(this)" maxlength="8" ng-model="dados.CEP" required />
+        <br />
+        <label>Cidade</label>
+        <input class="form-control" ng-model="dados. Cidade" value="{{dados.Cidade}}" required />
+        <label>Estado</label>
+        <input class="form-control" ng-model="dados.Estado" value="{{dados.Estado}}" required />
+        <label>Logradouro</label>
+        <input class="form-control" ng-model="dados.logradouro" value="{{dados.logradouro}}" required />
+        <label>Bairro</label>
+        <input class="form-control" ng-model="dados.Bairro" value="{{dados.Bairro}}" required />
+        <label>Tipo do logradouro</label>
+        <input class="form-control" ng-model="dados.TipoLogradouro" required />
+        <br />
+        <input type="submit" value="Alterar" ng-click="AlterarDados(dados)" class="btn btn-success" ng-disabled="!userForm.$valid" />
+    </form>
+</div>
     <label>Pesuquisa</label>
-   <input ng-model="searchKeyword" class="form-control"/>
+    <input ng-model="searchKeyword" class="form-control" />
     <table class="table">
         <thead>
             <tr>
@@ -33,7 +61,11 @@
                 <td>{{dados.Estado}}</td>
                 <td>{{dados.logradouro}}</td>
                 <td>{{dados.TipoLogradouro}}</td>
-                <td class="btn btn-danger" ng-click="Remover(dados.Id)">Remover</td>
+                <td>
+                    <button class="btn btn-danger" ng-click="Remover(dados.Id)">
+                        Remover</button>
+                   <button class="btn btn-warning" ng-click="Atualizar(dados.Id)">Atualizar</button>
+                </td>
             </tr>
         </tbody>
     </table>

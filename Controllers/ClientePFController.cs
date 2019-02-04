@@ -48,5 +48,24 @@ namespace ERPComercial.Controllers
             db.ClientePFs.Remove(cliente);
             db.SaveChanges();
         }
+        public JsonResult Atualizar(int id)
+        {
+            return Json(db.ClientePFs.Find(id),JsonRequestBehavior.AllowGet);
+        }
+        public void AlterarDados(int Id,string Nome, string Profissao, string Email, string CPF, string CEP, string Cidade, string Estado, string Bairro, string logradouro, string TipoLogradouro)
+        {
+            var cliente = db.ClientePFs.Find(Id);
+            cliente.Id = Id;
+            cliente.Nome = Nome;
+            cliente.Profissao = Profissao;
+            cliente.Email = Email;
+            cliente.CEP = CEP;
+            cliente.Cidade = Cidade;
+            cliente.Estado = Estado;
+            cliente.Bairro = Bairro;
+            cliente.logradouro = logradouro;
+            cliente.TipoLogradouro = TipoLogradouro;
+            db.SaveChanges();
+        }
     }
 }
