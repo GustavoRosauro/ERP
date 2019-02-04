@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Lista";
+}
+<script src="~/Scripts/angular.js"></script>
+<h2>Lista</h2>
+<div class="col-md-12" ng-app="ClientesAPP" ng-controller="ListaController">
+    <label>Pesuquisa</label>
+   <input ng-model="searchKeyword" class="form-control"/>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Profissão</th>
+                <th>Email</th>
+                <th>CPF</th>
+                <th>CEP</th>
+                <th>Cidade</th>
+                <th>Estado</th>
+                <th>Logradouro</th>
+                <th>Tipo do Logradouro</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="dados in lista | filter:searchKeyword">
+                <td hidden>{{dados.Id}}</td>
+                <td>{{dados.Nome}}</td>
+                <td>{{dados.Profissao}}</td>
+                <td>{{dados.Email}}</td>
+                <td>{{dados.CPF}}</td>
+                <td>{{dados.CEP}}</td>
+                <td>{{dados.Cidade}}</td>
+                <td>{{dados.Estado}}</td>
+                <td>{{dados.logradouro}}</td>
+                <td>{{dados.TipoLogradouro}}</td>
+                <td class="btn btn-danger" ng-click="Remover(dados.Id)">Remover</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script src="~/Scripts/Clientes/Listajs.js"></script>
+

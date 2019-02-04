@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Cadastro";
+}
+<script src="~/Scripts/angular.js"></script>
+<div class="col-md-12" ng-app="ClienteApp" ng-controller="ClienteController">
+    <h2>Cadastro</h2>
+    <a href="/ClientePF/Lista"><h2>Visualizar já Cadastrados</h2></a>
+    <form name="userForm" novalidate class="form">
+        <label>Nome</label>
+        <input class="form-control" ng-model="dados.Nome" required />
+        <label>Profissão</label>
+        <input class="form-control" ng-model="dados.Profissao" required />
+        <label>E-mail</label>
+        <input class="form-control" type="email" ng-model="dados.Email" required />
+        <label>CPF</label>
+        <input class="form-control" type="text" onkeyup="somenteNumeros(this)" maxlength="11" ng-model="dados.CPF" required />
+        <label>CEP</label>
+        <input class="form-control" type="text" onkeyup="somenteNumeros(this)" maxlength="8" ng-model="dados.CEP" required />
+        <button ng-click="Valida(dados.CEP)" class="btn btn-success">Valida</button>
+        <br />
+            <label>Cidade</label>
+            <input class="form-control" ng-model="dados.cidade" value="{{dados.cidade}}" required />
+            <label>Estado</label>
+            <input class="form-control" ng-model="dados.estado" value="{{dados.estado}}" required />
+            <label>Logradouro</label>
+            <input class="form-control" ng-model="dados.logradouro" value="{{dados.logradouro}}" required />
+            <label>Bairro</label>
+            <input class="form-control" ng-model="dados.bairro" value="{{dados.bairro}}" required />
+        <label>Tipo do logradouro</label>
+        <input class="form-control" ng-model="dados.TipoLogradouro" required />
+        <br />
+        <input type="submit" value="Salvar" ng-click="EnviaDados(dados)" class="btn btn-success" ng-disabled="!userForm.$valid"/>
+    </form>
+</div>
+<script src="~/Scripts/Clientes/Cadastro.js"></script>
