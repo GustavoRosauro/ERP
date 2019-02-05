@@ -133,6 +133,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClientePFController.cs" />
+    <Compile Include="Controllers\ClientePJController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -143,6 +144,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ClientePF.cs" />
+    <Compile Include="Models\ClientePJ.cs" />
     <Compile Include="Models\ERPComercialContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -183,6 +185,7 @@
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\ClientesPJ\Cadastro.js" />
     <Content Include="Scripts\Clientes\Cadastro.js" />
     <Content Include="Scripts\Clientes\Listajs.js" />
     <Content Include="Scripts\errors.json" />
@@ -964,6 +967,7 @@
     <Content Include="Scripts\version.json" />
     <Content Include="Views\ClientePF\Cadastro.cshtml" />
     <Content Include="Views\ClientePF\Lista.cshtml" />
+    <Content Include="Views\ClientePJ\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

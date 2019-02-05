@@ -20,5 +20,7 @@ namespace ERPComercial.Models
         }
 
         public System.Data.Entity.DbSet<ERPComercial.Models.ClientePF> ClientePFs { get; set; }
+
+        public System.Data.Entity.DbSet<ERPComercial.Models.ClientePJ> ClientePJs { get; set; }
     }
 }

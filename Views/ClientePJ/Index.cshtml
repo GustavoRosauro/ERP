@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/angular.js"></script>
+<div class="col-md-12" ng-app="ClienteApp" ng-controller="ClienteController">
+    <h2>Cadastro</h2>
+    <label>Digite o CNPJ</label>
+    <input class="form-control" ng-model="cnpj"/>
+    <br />
+    <button class="btn btn-warning" ng-click="ValidaCNPJ(cnpj)">Valida CNPJ</button>
+    <div ng-repeat="item in lista">
+        <form name="useForm" novalidate class="form">
+            <label>Nome</label>
+            <input class="form-control" ng-model="item.Nome" />
+            <label>Estado</label>
+            <input class="form-control" ng-model="item.Uf" />
+            <label>Telefone</label>
+            <input class="form-control" ng-model="item.Telefone" />
+            <label>Situacao</label>
+            <input class="form-control" ng-model="item.Situacao" />
+            <label>Bairro</label>
+            <input class="form-control" ng-model="item.Bairro" />
+            <label>Logradouro</label>
+            <input class="form-control" ng-model="item.Logradouro" />
+            <label>Numero</label>
+            <input class="form-control" ng-model="item.Numero" />
+            <label>CEP</label>
+            <input class="form-control" ng-model="item.CEP" />
+            <label>Municipio</label>
+            <input class="form-control" ng-model="item.Municipio" />
+            <label>Porte</label>
+            <input class="form-control" ng-model="item.Porte" />
+            <label>Data de Abertura</label>
+            <input class="form-control" ng-model="item.Abertura" />
+            <label>Natureza Juridica</label>
+            <input class="form-control" ng-model="item.natureza_juridica" />
+            <label>CNPJ</label>
+            <input class="form-control" ng-model="item.CNPJ" />
+            <label>Ultima Atualizacao</label>
+            <input class="form-control" ng-model="item.Ultima_Atualizacao" />
+            <label>Status</label>
+            <input class="form-control" ng-model="item.status" />
+            <label>Tipo</label>
+            <input class="form-control" ng-model="item.Tipo" />
+            <label>Fantasia</label>
+            <input class="form-control" ng-model="item.Fantasia" />
+            <label>Compelemento</label>
+            <input class="form-control" ng-model="item.Complemento" />
+            <label>Email</label>
+            <input class="form-control" ng-model="item.Email" />
+            <br />
+            <input type="submit" value="Salvar" class="btn btn-success" ng-disabled="!useForm.$valid" />
+        </form>
+    </div>
+</div>
+<script src="~/Scripts/ClientesPJ/Cadastro.js"></script>
