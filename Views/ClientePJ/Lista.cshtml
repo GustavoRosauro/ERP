@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Lista";
+}
+<script src="~/Scripts/angular.js"></script>
+<div class="col-md-12" ng-app="ClienteApp" ng-controller="ClienteController">
+    <h2>Lista</h2>
+    <input class="form-control" ng-model="BuscaPalavra"/>
+    <div ng-repeat="item in lista | filter:BuscaPalavra">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>UF</th>
+                    <th>Telefone</th>
+                    <th>Situacao</th>
+                    <th>Bairro</th>
+                    <th>Logradouro</th>
+                    <th>Numero</th>
+                    <th>CEP</th>
+                    <th>Municipio</th>
+                    <th>Porte</th>
+                    <th>Abertura</th>
+                    <th>Natureza Juridica</th>
+                    <th>CNPJ</th>
+                    <th>Ultima Atualização</th>
+                    <th>Status</th>
+                    <th>Tipo</th>
+                    <th>Fantasia</th>
+                    <th>Complemento</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{item.Nome}}</td>
+                    <td>{{item.Uf}}</td>
+                    <td>{{item.Telefone}}</td>
+                    <td>{{item.Situacao}}</td>
+                    <td>{{item.Bairro}}</td>
+                    <td>{{item.Logradouro}}</td>
+                    <td>{{item.Numero}}</td>
+                    <td>{{item.CEP}}</td>
+                    <td>{{item.Municipio}}</td>
+                    <td>{{item.Porte}}</td>
+                    <td>{{item.Abertura}}</td>
+                    <td>{{item.natureza_juridica}}</td>
+                    <td>{{item.CNPJ}}</td>
+                    <td>{{item.Ultima_Atualizacao}}</td>
+                    <td>{{item.satatus}}</td>
+                    <td>{{item.Tipo}}</td>
+                    <td>{{item.Fantasia}}</td>
+                    <td>{{item.Complemento}}</td>
+                    <td>{{item.Email}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="~/Scripts/ClientesPJ/Lista.js"></script>

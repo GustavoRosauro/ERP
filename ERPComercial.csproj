@@ -138,9 +138,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201902041413493_Gustavo.cs" />
-    <Compile Include="Migrations\201902041413493_Gustavo.Designer.cs">
-      <DependentUpon>201902041413493_Gustavo.cs</DependentUpon>
+    <Compile Include="Migrations\201902052236259_Gustavo.cs" />
+    <Compile Include="Migrations\201902052236259_Gustavo.Designer.cs">
+      <DependentUpon>201902052236259_Gustavo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ClientePF.cs" />
@@ -186,6 +186,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\ClientesPJ\Cadastro.js" />
+    <Content Include="Scripts\ClientesPJ\Lista.js" />
     <Content Include="Scripts\Clientes\Cadastro.js" />
     <Content Include="Scripts\Clientes\Listajs.js" />
     <Content Include="Scripts\errors.json" />
@@ -951,14 +952,18 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\sitemap.xml" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -968,6 +973,7 @@
     <Content Include="Views\ClientePF\Cadastro.cshtml" />
     <Content Include="Views\ClientePF\Lista.cshtml" />
     <Content Include="Views\ClientePJ\Index.cshtml" />
+    <Content Include="Views\ClientePJ\Lista.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -986,8 +992,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201902041413493_Gustavo.resx">
-      <DependentUpon>201902041413493_Gustavo.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201902052236259_Gustavo.resx">
+      <DependentUpon>201902052236259_Gustavo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

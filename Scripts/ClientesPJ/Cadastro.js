@@ -10,4 +10,13 @@ app.controller("ClienteController", ($scope, $http) => {
             $scope.lista = [dados.data];
             });
     };
+    $scope.EnviaItens = (itens) => {
+        $http({
+            method: "POST",
+            url: "/ClientePJ/Adicionar",
+            data: itens
+        }).then(() => {
+            window.location.reload();
+        });
+    };
 });
